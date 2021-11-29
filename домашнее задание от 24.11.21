@@ -1,0 +1,34 @@
+домашнее практическое задание №1
+
+duration = int (input ('введите желаемый промежуток времени :  '))
+min = 60
+hour = 3600
+day = 86400
+if (duration) < (min):
+    print (str(duration) + ' секунд')
+else:
+    if (duration) >= (min) and (duration) < (hour):
+        print (str((duration) // (min)) + ' минут')
+
+if (duration) >= (hour) and (duration) < (day):
+    print (str((duration) // (hour)) + ' часов')
+else:
+    if (duration) >= (day):
+        print (str((duration) // (day)) + ' дней')
+        
+        
+        домашнее практическое задание №2
+        ___возникли трудности с выполнением
+      
+        
+  # домашнее практическое задание №3
+a = int(input('введите %   '))
+if a == 1:
+    print (str(a) + '  процент')
+if a > 1 and a < 5:
+    print (str(a) + '  процента')
+if a >= 5 and a <= 100:
+    print (str(a) + '  процентов')
+else:
+    print ('введите число от 1 до 100')
+
