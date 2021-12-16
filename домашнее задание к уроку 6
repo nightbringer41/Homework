@@ -1,0 +1,33 @@
+#домашнее задание 1
+
+
+def odd_number(n):
+    for num in range(1, n + 1, 2):
+        yield num
+
+
+odd_to_10 = odd_number(10)
+print(next(odd_to_10))
+print(next(odd_to_10))
+print(odd_to_10)
+
+#домашнее задание №3
+from itertools import zip_longest, islice
+tutors = [
+    'Иван', 'Анастасия', 'Петр', 'Сергей',
+    'Дмитрий', 'Борис', 'Елена'
+]
+klasses = [
+    '9А', '7В', '9Б', '9В', '8Б', '10А', '10Б', '9А'
+]
+my_gen = ((tutors, klasses) for tutors, klasses in zip_longest(tutors, klasses, fillvalue=None)
+
+print(*islice(my_gen, len(tutors)), sep='\n')
+
+#домашнее задание №4
+src = [300,2,12,44,1,1,4,10,7,1,78,123,55]
+print([n for i, n in enumerate(src[1:], start=1) if n > src[i - 1 ]])
+
+#домашнее задание №5
+src = [2,2,2,7,23,1,44,44,3,2,10,7,4,11]
+print([n for n in src if src.count(n) == 1])
