@@ -1,0 +1,26 @@
+#домашнее задание №1
+
+import os.path
+
+project_path = 'my_project'
+paths = ['settings', 'mainapp', 'admiapp', 'authapp']
+for d in paths:
+    os.makedirs(os.path.join(os.curdir, project_path, d))
+    
+    
+    #домашнее задание №3
+
+import os
+
+SRC_FOLDER = 'me_project'
+DST_FOLDER = 'templates'
+
+dirs = os.walk(SRC_FOLDER)
+for x, y, _ in dirs:
+    for i in y:
+        newpath = os.path.join(os.curdir, DST_FOLDER, os.sep.join(x.split(os.sep)[1:]),i)
+        print(x.split(os.sep))
+        os.makedirs(newpath)
+        
+домашнее задание №4
+
